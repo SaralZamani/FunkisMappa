@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Funkis Mappa</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Hem</a>
+        <a class="nav-link" href="/ibtimages">IBT Övningar</a>
+        <a class="nav-link" href="/ibtimages/new">Ny IBT Övning</a>
+      </div>
+      <div class="navbar-nav ml-auto">
+        <% if(!currentUser) {%>
+        <a class="nav-link" href="/login">Logga in</a>
+        <a class="nav-link" href="/register">Registrera</a>
+        <% } else {%>
+        <a class="nav-link" href="/logout">Logga ut</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
